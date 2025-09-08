@@ -1,0 +1,47 @@
+.contact-section {
+  padding: 80px 20px;
+  background: linear-gradient(-45deg, #1e293b, #334155, #475569, #0f172a);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row desktop */
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.contact-card:hover {
+  background: rgba(115, 114, 114, 0.12);
+  transform: translateY(-5px);
+}
+
+.contact-icon {
+  font-size: 1.8rem;
+  color: #facc15;
+}
+
+.contact-card a {
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}

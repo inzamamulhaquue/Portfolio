@@ -1,0 +1,121 @@
+/* ===== Projects Section ===== */
+.projects-section {
+  padding: 80px 20px;
+  background: linear-gradient(-45deg, #3f579a, #7b49aa, #aa8a52, #53a8b7);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.projects-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  font-weight: 800;
+  color: #facc15;
+  text-shadow: 0 0 12px rgba(250, 204, 21, 0.6);
+  letter-spacing: 1px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row desktop */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  transition: all 0.35s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.project-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #facc15;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #f1f1f1;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.tech-stack {
+  margin-bottom: 18px;
+}
+
+.tech-item {
+  display: inline-block;
+  background: #facc15;
+  color: #111;
+  padding: 4px 10px;
+  margin: 3px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.project-btn {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 12px;
+  background: #facc15;
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.project-btn:hover {
+  background: #e6e4d3;
+  transform: scale(1.05);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: 1fr; /* 1 per row tablet/mobile */
+  }
+
+  .section-title {
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+  }
+
+  .project-card {
+    padding: 22px;
+  }
+
+  .project-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .project-card p {
+    font-size: 0.95rem;
+  }
+}

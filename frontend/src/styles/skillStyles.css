@@ -1,0 +1,124 @@
+/* ===== Skills Section ===== */
+.skills-section {
+  padding: 80px 20px;
+  background: linear-gradient(-45deg, #3f579a, #7b49aa, #aa8a52, #53a8b7);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.skills-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+.skills-title {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  font-weight: 800;
+  color: #facc15;
+  text-shadow: 0 0 12px rgba(250, 204, 21, 0.6);
+  letter-spacing: 1px;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row desktop */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: all 0.35s ease;
+  text-align: center;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.skill-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 18px;
+  color: #facc15;
+}
+
+.skill-card p {
+  font-size: 1rem;
+  color: #f1f1f1;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.skill-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 10px;
+  font-size: 2.2rem;
+}
+
+.icon {
+  transition: transform 0.3s, color 0.3s;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.3);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 992px) {
+  .skills-grid {
+    grid-template-columns: 1fr; /* 1 per row on mobile */
+  }
+
+  .skills-title {
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+  }
+
+  .skill-card {
+    padding: 22px;
+  }
+
+  .skill-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .skill-icons {
+    font-size: 1.8rem;
+  }
+
+  .skill-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===== Icon Colors (same as services) ===== */
+.icon.js { color: #f7df1e; }
+.icon.react { color: #61dafb; }
+.icon.node { color: #3c873a; }
+.icon.mongo { color: #4db33d; }
+.icon.aws { color: #ff9900; }
+.icon.docker { color: #2496ed; }
+.icon.html { color: #e34f26; }
+.icon.css { color: #2965f1; }
+.icon.git { color: #fff; }
+

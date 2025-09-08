@@ -1,0 +1,105 @@
+/* ===== Experience Section ===== */
+.experience-section {
+  padding: 80px 20px;
+  background: linear-gradient(-45deg, #1e293b, #334155, #475569, #0f172a);
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.experience-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+.experience-title {
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  font-weight: 800;
+  color: #facc15;
+  text-shadow: 0 0 12px rgba(250, 204, 21, 0.6);
+  letter-spacing: 1px;
+}
+
+.experience-timeline {
+  display: grid;
+  grid-template-columns: 1fr; /* ✅ 1 card per row */
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 25px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  transition: all 0.35s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.35);
+}
+
+.experience-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+  color: #facc15;
+}
+
+.experience-card h4 {
+  font-size: 1.2rem;
+  margin: 5px 0 10px;
+  color: #e2e8f0;
+}
+
+.duration {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
+  color: #94a3b8;
+}
+
+.experience-card ul {
+  list-style: disc;
+  padding-left: 0;
+  margin: 0;
+  color: #f1f1f1;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.experience-card ul p {
+  color: #f1f1f1;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 4px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .experience-title {
+    font-size: 2.2rem;
+    margin-bottom: 35px;
+  }
+  .experience-card {
+    padding: 20px;
+  }
+  .experience-card h3 {
+    font-size: 1.4rem;
+  }
+  .experience-card h4 {
+    font-size: 1.1rem;
+  }
+}

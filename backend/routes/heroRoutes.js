@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
                 phone: '+917631856488',
                 linkedin: 'https://www.linkedin.com/in/inzamamhaq-bb7275234/',
                 github: 'https://github.com/inzamamulhaquue',
-                resume: 'https://drive.google.com/file/d/1Nnp5s2jdWeOpPyj0czvcHYBa79mfS7gu/view?usp=drive_link',
+                resume: 'https://drive.google.com/file/d/1Vkpud9IYIr0Ykh3yWn_HCkdj2y0tplul/view?usp=drive_link',
                 whatsapp: '+917631856488',
                 description: 'Full Stack Developer with experience in MERN, AWS, CyberArk and modern web technologies. Skilled in building scalable apps, REST APIs, and delivering high-quality user experiences.'
             });

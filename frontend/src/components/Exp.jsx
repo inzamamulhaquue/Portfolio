@@ -5,7 +5,8 @@ export default function Experience() {
   const [experiences, setExperiences] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/exp")
+    // fetch("http://localhost:5000/api/exp")
+    fetch("https://portfolio-backend-wjnf.onrender.com/api/exp")
       .then((res) => res.json())
       .then((data) => setExperiences(data))
       .catch((err) => console.error("Error fetching experiences:", err));

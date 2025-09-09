@@ -12,7 +12,8 @@ export default function Skills() {
 
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/skills")
+        // fetch("http://localhost:5000/api/skills")
+     fetch("https://portfolio-backend-wjnf.onrender.com/api/skills")
         .then((res) => res.json())
         .then((data) => setSkills(data))
         .catch((eror) => console.error("Error fetching:", eror));

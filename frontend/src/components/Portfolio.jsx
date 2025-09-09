@@ -7,7 +7,8 @@ export default function Portfolio() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/hero")
+    // fetch("http://localhost:5000/api/hero")
+    fetch("https://portfolio-backend-wjnf.onrender.com/api/hero")
       .then((res) => res.json())
       .then((data) => setData(data))
       .catch((err) => console.error("Fetch error:", err))

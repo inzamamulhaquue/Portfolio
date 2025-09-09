@@ -4,22 +4,13 @@ const router = express.Router();
 
 // Get Portfolio Data
 router.get('/', async (req, res) => {
+    router.get('/', async (req, res) => {
     try {
-        let data = await Hero.findOne();
-        if (!data) {
-            data = await Hero.create({
-                name: 'Inzamamul Haque',
-                title: 'SDE | MERN Stack Developer | CyberArk',
-                email: 'inz01haq@gmail.com',
-                phone: '+917631856488',
-                linkedin: 'https://www.linkedin.com/in/inzamamhaq-bb7275234/',
-                github: 'https://github.com/inzamamulhaquue',
-                resume: 'https://drive.google.com/file/d/1Vkpud9IYIr0Ykh3yWn_HCkdj2y0tplul/view?usp=drive_link',
-                whatsapp: '+917631856488',
-                description: 'Full Stack Developer with experience in MERN, AWS, CyberArk and modern web technologies. Skilled in building scalable apps, REST APIs, and delivering high-quality user experiences.'
-            });
+        const hero = await Hero.findOne(); // fetch first document
+        if (!hero) {
+            return res.status(404).json({ message: "No hero data found in database" });
         }
-        res.json(data);
+        res.json(hero);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
@@ -28,9 +19,15 @@ router.get('/', async (req, res) => {
 // Update hero description
 router.put('/', async (req, res) => {
     try {
-         const updateFields = req.body; // e.g. { name: "...", description: "...", email: "..." }
-        const data = await Hero.findOneAndUpdate({}, updateFields, { new: true, upsert: true });
-        res.json(data);
+        const updatedHero = await Hero.findOneAndUpdate(
+            {}, // update the first doc
+            req.body, 
+            { new: true, upsert: false } // no auto-create
+        );
+        if (!updatedHero) {
+            return res.status(404).json({ message: "No hero data found to update" });
+        }
+        res.json(updatedHero);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }

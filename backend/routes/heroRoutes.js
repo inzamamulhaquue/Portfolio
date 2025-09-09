@@ -4,7 +4,6 @@ const router = express.Router();
 
 // Get Portfolio Data
 router.get('/', async (req, res) => {
-    router.get('/', async (req, res) => {
     try {
         const hero = await Hero.findOne(); // fetch first document
         if (!hero) {
@@ -21,7 +20,7 @@ router.put('/', async (req, res) => {
     try {
         const updatedHero = await Hero.findOneAndUpdate(
             {}, // update the first doc
-            req.body, 
+            req.body,
             { new: true, upsert: false } // no auto-create
         );
         if (!updatedHero) {

@@ -1,5 +1,5 @@
 const express = require('express');
-const Hero = require('../models/hero');
+const Hero = require('../models/Hero.js');
 const router = express.Router();
 
 // Get Portfolio Data

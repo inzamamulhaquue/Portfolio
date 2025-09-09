@@ -13,7 +13,8 @@ export default function Contact() {
   const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/contact")
+    // fetch("http://localhost:5000/api/contact")
+    fetch("https://portfolio-backend-wjnf.onrender.com/api/contact")
       .then((res) => res.json())
       .then((data) => setContacts(data))
       .catch((err) => console.error("Error fetching contacts:", err));

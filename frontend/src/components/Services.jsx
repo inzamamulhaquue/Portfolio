@@ -18,7 +18,8 @@ export default function Services() {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/services")
+        // fetch("http://localhost:5000/api/services")
+      fetch("https://portfolio-backend-wjnf.onrender.com/api/services")
             .then((res) => res.json())
             .then((data) => { console.log("Services fetched:", data);
             setServices(data) })
